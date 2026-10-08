@@ -28,4 +28,3 @@
 | 11 | [docs/progress.md](docs/progress.md) | Live status tracker |
 | 12 | [docs/rules.md](docs/rules.md) | Engineering rules + definition of done |
 | 13 | [docs/cost-estimate.md](docs/cost-estimate.md) | Third-party service pricing and monthly run cost by stage |
-| — | [CLAUDE.md](CLAUDE.md) | Entry point for AI coding agents |

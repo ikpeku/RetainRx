@@ -2,22 +2,22 @@
 
 What it costs RetainRx to run the stack in [tech-stack.md](tech-stack.md). Prices were checked on 2026-10-08. Amounts are in USD because most vendors bill in dollars. Naira figures use **₦1,400 / $1**: the CBN official rate is about ₦1,329 and the parallel rate about ₦1,390, and the extra margin covers the FX spread on dollar cards.
 
-> Re-check the ⚠️ rows before you budget. They are either secondary-source figures or pricing that is changing.
+> Re-check the  rows before you budget. They are either secondary-source figures or pricing that is changing.
 
 ## 1. Unit prices
 
 | Service | What we use it for | Price | Source |
 |---|---|---|---|
-| **WhatsApp Cloud API**: utility template ⚠️ | Reminders, back-in-stock alerts, late stock answers | **~$0.0101 per delivered message** (Nigeria). Lower rates unlock with monthly volume | Meta rate card (CSV) — Nigeria figure from a secondary source |
+| **WhatsApp Cloud API**: utility template  | Reminders, back-in-stock alerts, late stock answers | **~$0.0101 per delivered message** (Nigeria). Lower rates unlock with monthly volume | Meta rate card (CSV) — Nigeria figure from a secondary source |
 | WhatsApp: authentication template | Staff OTP login | About the utility rate or lower | Meta rate card |
-| WhatsApp: service messages (free-form replies inside the 24h window) ⚠️ | All Rexa conversation replies | **Free** according to Meta's docs. One secondary source says they cost about $0.0101 from 1 Oct 2026 | See §5 |
+| WhatsApp: service messages (free-form replies inside the 24h window)  | All Rexa conversation replies | **Free** according to Meta's docs. One secondary source says they cost about $0.0101 from 1 Oct 2026 | See §5 |
 | **Claude Sonnet 5.5** (`claude-sonnet-5-5`) | Medicine photo extraction | $2 / M input tokens, $10 / M output tokens; cache reads $0.20 / M | Anthropic |
 | **Claude Haiku 4.5** (`claude-haiku-4-5`), current spec | Intent classification | $1 / M input, $5 / M output | Anthropic |
 | Claude Haiku 5.5 (`claude-haiku-5-5`), alternative | Intent classification | $0.10 / M input, $0.50 / M output (10× cheaper) | Anthropic |
-| **Render** | Hosting | Web service: Starter $7, Standard $25, Pro $85 per month. Background worker from $7 per month. Postgres: Basic $20, Standard $95, Pro $185 per month. Workspace seats are extra (roughly $19 per user per month on Professional ⚠️) | Render |
+| **Render** | Hosting | Web service: Starter $7, Standard $25, Pro $85 per month. Background worker from $7 per month. Postgres: Basic $20, Standard $95, Pro $185 per month. Workspace seats are extra (roughly $19 per user per month on Professional ) | Render |
 | **Cloudflare R2** | Photos, PDFs | $0.015 per GB-month, $4.50 per M writes, $0.36 per M reads, **egress free**. Free tier: 10 GB, 1M writes, 10M reads per month | Cloudflare |
 | **Sentry** | Error tracking | Developer free (1 user, 5k errors); Team $26 per month; Business $80 per month | Sentry |
-| **Termii** ⚠️ | SMS fallback for OTP | About ₦6 per SMS (Nigerian retail rate; Termii's own rate card not confirmed) | Market rate |
+| **Termii**  | SMS fallback for OTP | About ₦6 per SMS (Nigerian retail rate; Termii's own rate card not confirmed) | Market rate |
 | **Paystack** | Collecting invoices from pharmacies | 1.5% + ₦100 per payment, **capped at ₦2,000**; the ₦100 is waived under ₦2,500 | Paystack |
 | Other | Domain, GitHub, Google Workspace (admin login) | About $15 per year; GitHub free or Team $4 per user; Workspace about $7 per user | — |
 
@@ -96,7 +96,7 @@ One-off enrolment cost for 1,500 customers: about $23 of Claude, plus about $121
 
 | Item | Action |
 |---|---|
-| ⚠️ Service-message charging from Oct 2026 | Meta's pricing page doesn't list it, but a secondary source says it applies. **Confirm in WhatsApp Manager billing before the pilot.** If it applies, the WhatsApp bill roughly doubles |
+|  Service-message charging from Oct 2026 | Meta's pricing page doesn't list it, but a secondary source says it applies. **Confirm in WhatsApp Manager billing before the pilot.** If it applies, the WhatsApp bill roughly doubles |
 | Enrolment is about 8 outbound messages | Combine messages (for example, put the read-back and the duration question in one message) to cut scenario-B cost and drop-off |
 | Intent classification on Haiku 4.5 | Switching to `claude-haiku-5-5` is 10× cheaper and is the current Haiku. Run the P5.1 intent eval before switching (decision log) |
 | Photo extraction prompt | Use prompt caching on the fixed system prompt and effort `low`; output stays short through tool use |
